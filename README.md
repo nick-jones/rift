@@ -5,7 +5,7 @@ progress.
 
 ## About
 
-Rift parses Thrift IDL into an simple abstract syntax tree. It uses [Rexical](https://github.com/tenderlove/rexical)
+Rift parses Thrift IDL into a simple abstract syntax tree. It uses [Rexical](https://github.com/tenderlove/rexical)
 for lexing, and [Racc](https://github.com/tenderlove/racc) for parsing. The Thrift IDL grammar is largely supported;
 constructs tagged as deprecated within the Thrift project are not permitted. Also, text from doc comments are not
 currently represented in the tree.
