@@ -1,0 +1,5 @@
+---
+- !ruby/object:Rift::Nodes::Enum
+  annotations:
+  name: X
+  values: []

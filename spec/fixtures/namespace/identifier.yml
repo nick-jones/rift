@@ -1,0 +1,4 @@
+---
+- !ruby/object:Rift::Nodes::Namespace
+  language: java
+  value: com.example

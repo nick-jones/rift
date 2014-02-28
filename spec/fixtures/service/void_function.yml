@@ -1,0 +1,13 @@
+--- 
+- !ruby/object:Rift::Nodes::Service 
+  annotations: 
+  extends: 
+  functions: 
+  - !ruby/object:Rift::Nodes::Function 
+    annotations: 
+    arguments: []
+    exceptions: 
+    name: a
+    oneway: false
+    return_type: void
+  name: X

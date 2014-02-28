@@ -1,0 +1,3 @@
+---
+- !ruby/object:Rift::Nodes::Include
+  path: test.thrift

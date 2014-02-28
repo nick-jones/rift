@@ -1,0 +1,43 @@
+--- 
+- !ruby/object:Rift::Nodes::Service 
+  annotations: 
+  extends: 
+  functions: 
+  - !ruby/object:Rift::Nodes::Function 
+    annotations: 
+    arguments: []
+    exceptions: 
+    - !ruby/object:Rift::Nodes::Field 
+      identifier: !ruby/object:Rift::Nodes::FieldIdentifier 
+        auto_assigned: false
+        value: 1
+      name: xe
+      requiredness: opt_in_req_out
+      type: !ruby/object:Rift::Nodes::FieldType 
+        type: user_defined
+        value: XException
+      value: 
+      xsd_attributes: 
+      xsd_nillable: false
+      xsd_optional: false
+    - !ruby/object:Rift::Nodes::Field 
+      identifier: !ruby/object:Rift::Nodes::FieldIdentifier 
+        auto_assigned: false
+        value: 2
+      name: ye
+      requiredness: opt_in_req_out
+      type: !ruby/object:Rift::Nodes::FieldType 
+        type: user_defined
+        value: YException
+      value: 
+      xsd_attributes: 
+      xsd_nillable: false
+      xsd_optional: false
+    name: a
+    oneway: false
+    return_type: !ruby/object:Rift::Nodes::FieldType 
+      type: primitive
+      value: !ruby/object:Rift::Nodes::BaseType 
+        annotations: 
+        type: bool
+  name: X

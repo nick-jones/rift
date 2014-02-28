@@ -1,0 +1,6 @@
+---
+- !ruby/object:Rift::Nodes::Service
+  annotations:
+  extends:
+  functions: []
+  name: X

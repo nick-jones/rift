@@ -1,0 +1,9 @@
+---
+- !ruby/object:Rift::Nodes::Enum
+  annotations:
+  name: X
+  values:
+  - !ruby/object:Rift::Nodes::EnumValue
+    annotations:
+    name: A
+    value: 0

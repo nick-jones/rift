@@ -1,0 +1,7 @@
+---
+- !ruby/object:Rift::Nodes::Typedef
+  annotations:
+  symbolic: X
+  type: !ruby/object:Rift::Nodes::FieldType
+    type: user_defined
+    value: Y

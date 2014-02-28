@@ -1,0 +1,7 @@
+---
+- !ruby/object:Rift::Nodes::Struct
+  annotations:
+  members: []
+  name: X
+  type: struct
+  xsd_all: false

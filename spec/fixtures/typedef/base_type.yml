@@ -1,0 +1,9 @@
+---
+- !ruby/object:Rift::Nodes::Typedef
+  annotations:
+  symbolic: X
+  type: !ruby/object:Rift::Nodes::FieldType
+    type: primitive
+    value: !ruby/object:Rift::Nodes::BaseType
+      annotations:
+      type: i32
