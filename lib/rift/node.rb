@@ -9,6 +9,15 @@ module Rift
         to_a == other.to_a
     end
 
+    # Returns an array where each element is an array pair. The first element is the instance variable
+    # name, and the second is its value.
+    def to_a
+      nodes = instance_variables.map { |v| [v, instance_variable_get(v)] }
+      nodes_to_a nodes
+    end
+
+    protected
+
     # Converts the supplied nodes into an equivalent array based representation. It does this in a
     # recursive fashion.
     def nodes_to_a nodes
@@ -17,13 +26,6 @@ module Rift
       end
 
       nodes
-    end
-
-    # Returns an array where each element is an array pair. The first element is the instance variable
-    # name, and the second is its value.
-    def to_a
-      nodes = instance_variables.map { |v| [v, instance_variable_get(v)] }
-      nodes_to_a nodes
     end
   end
 end
