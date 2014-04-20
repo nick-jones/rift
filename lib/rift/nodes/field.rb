@@ -21,6 +21,13 @@ module Rift
         @identifier = identifier
         @value = value
       end
+
+      def accept(visitor)
+        type.accept(visitor) unless type.nil?
+        identifier.accept(visitor) unless identifier.nil?
+        value.accept(visitor) unless value.nil?
+        visitor.visit(self)
+      end
     end
   end
 end

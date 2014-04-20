@@ -15,6 +15,11 @@ module Rift
         @type = type
         @members = members
       end
+
+      def accept(visitor)
+        members.each { |member| member.accept(visitor) }
+        visitor.visit(self)
+      end
     end
   end
 end

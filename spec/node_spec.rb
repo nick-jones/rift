@@ -55,4 +55,14 @@ describe Rift::Node do
       expect(node.to_a).to eq(expected)
     end
   end
+
+  describe "#accept" do
+    it "should pass itself to the visitor" do
+      visitor = double('Visitor')
+      allow(visitor).to receive(:visit)
+
+      node.accept(visitor)
+      expect(visitor).to have_received(:visit).with(node).once
+    end
+  end
 end

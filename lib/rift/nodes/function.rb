@@ -14,6 +14,13 @@ module Rift
         @arguments = arguments
         @oneway = oneway
       end
+
+      def accept(visitor)
+        return_type.accept(visitor) unless return_type.nil? || return_type.is_a?(String)
+        arguments.each { |argument| argument.accept(visitor) }
+        exceptions.each { |exception| exception.accept(visitor) }
+        visitor.visit(self)
+      end
     end
   end
 end

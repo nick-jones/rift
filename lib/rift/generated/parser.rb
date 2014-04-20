@@ -885,7 +885,7 @@ module_eval(<<'.,.,', 'parser.racc', 236)
 
 module_eval(<<'.,.,', 'parser.racc', 239)
   def _reduce_61(val, _values, result)
-          result = nil
+          result = []
     
     result
   end

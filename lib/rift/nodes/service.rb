@@ -11,6 +11,11 @@ module Rift
         @extends = extends
         @functions = functions
       end
+
+      def accept(visitor)
+        functions.each { |function| function.accept(visitor) }
+        visitor.visit(self)
+      end
     end
   end
 end

@@ -11,6 +11,11 @@ module Rift
         @type = type
         @value = value
       end
+
+      def accept(visitor)
+        value.accept(visitor) unless value.nil? || value.is_a?(String)
+        visitor.visit(self)
+      end
     end
   end
 end

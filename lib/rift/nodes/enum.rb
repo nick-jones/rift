@@ -9,6 +9,11 @@ module Rift
         @name = name
         @values = values
       end
+
+      def accept(visitor)
+        values.each { |value| value.accept(visitor) }
+        visitor.visit(self)
+      end
     end
   end
 end

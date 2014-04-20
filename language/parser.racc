@@ -237,7 +237,7 @@ rule
       result = val[2]
     }
     | /* empty */ {
-      result = nil
+      result = []
     }
 
   field_list

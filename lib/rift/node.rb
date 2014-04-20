@@ -1,6 +1,12 @@
 require "pp"
+
 module Rift
   class Node
+    # Simple accept implementation. Nodes that enumerate other nodes must override this.
+    def accept(visitor)
+      visitor.visit(self)
+    end
+
     # As the nodes are "pure" at the moment, we can simply compare classname + instance variables. If
     # internal only instance variables are ever added, this will need rethinking. Furthermore, as this
     # results in the entire tree being converted to an array, using a visitor may be more suitable.

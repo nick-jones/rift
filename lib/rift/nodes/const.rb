@@ -10,6 +10,12 @@ module Rift
         @name = name
         @value = value
       end
+
+      def accept(visitor)
+        type.accept(visitor) unless type.nil?
+        value.accept(visitor) unless value.nil?
+        visitor.visit(self)
+      end
     end
   end
 end

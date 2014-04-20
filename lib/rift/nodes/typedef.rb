@@ -10,6 +10,11 @@ module Rift
         @symbolic = symbolic
         @annotations = annotations
       end
+
+      def accept(visitor)
+        type.accept(visitor) unless type.nil?
+        visitor.visit(self)
+      end
     end
   end
 end
