@@ -1,5 +1,7 @@
 # Rift
 
+[![Build Status](https://travis-ci.org/nick-jones/rift.svg?branch=master)](https://travis-ci.org/nick-jones/rift)
+
 This is a [Thrift IDL](https://thrift.apache.org/docs/idl/) parser written in Ruby. It is largely still work in
 progress.
 
