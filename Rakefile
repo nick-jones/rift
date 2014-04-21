@@ -8,3 +8,5 @@ task :compile do
   sh "bundle exec rex language/tokenizer.rex -o lib/rift/generated/tokenizer.rb"
   sh "bundle exec racc language/parser.racc -o lib/rift/generated/parser.rb"
 end
+
+task :default => :spec
