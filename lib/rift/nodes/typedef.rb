@@ -5,10 +5,9 @@ module Rift
       attr_accessor :symbolic
       attr_accessor :annotations
 
-      def initialize(type, symbolic, annotations = nil)
+      def initialize(type, symbolic)
         @type = type
         @symbolic = symbolic
-        @annotations = annotations
       end
 
       def accept(visitor)

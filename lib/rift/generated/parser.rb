@@ -13,7 +13,7 @@ module Rift
   module Generated
     class Parser < Rift::Generated::Tokenizer
 
-module_eval(<<'...end parser.racc/module_eval...', 'parser.racc', 408)
+module_eval(<<'...end parser.racc/module_eval...', 'parser.racc', 409)
 
 def clear_doc_text_candidate
   @doc_text = nil
@@ -560,13 +560,14 @@ module_eval(<<'.,.,', 'parser.racc', 49)
 
 module_eval(<<'.,.,', 'parser.racc', 61)
   def _reduce_21(val, _values, result)
-          result = Rift::Nodes::Typedef.new(val[1], val[2], val[3])
+          result = Rift::Nodes::Typedef.new(val[1], val[2])
+      result.annotations = val[3]
     
     result
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 66)
+module_eval(<<'.,.,', 'parser.racc', 67)
   def _reduce_22(val, _values, result)
           result = val[3]
       result.name = val[1]
@@ -576,7 +577,7 @@ module_eval(<<'.,.,', 'parser.racc', 66)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 73)
+module_eval(<<'.,.,', 'parser.racc', 74)
   def _reduce_23(val, _values, result)
           result = val[0]
       result.values.push(val[1])
@@ -585,7 +586,7 @@ module_eval(<<'.,.,', 'parser.racc', 73)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 77)
+module_eval(<<'.,.,', 'parser.racc', 78)
   def _reduce_24(val, _values, result)
           result = Rift::Nodes::Enum.new
     
@@ -593,7 +594,7 @@ module_eval(<<'.,.,', 'parser.racc', 77)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 82)
+module_eval(<<'.,.,', 'parser.racc', 83)
   def _reduce_25(val, _values, result)
           result = Rift::Nodes::EnumValue.new(val[1], val[3])
       result.annotations = val[4]
@@ -602,7 +603,7 @@ module_eval(<<'.,.,', 'parser.racc', 82)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 86)
+module_eval(<<'.,.,', 'parser.racc', 87)
   def _reduce_26(val, _values, result)
           result = Rift::Nodes::EnumValue.new(val[1])
       result.annotations = val[2]
@@ -611,7 +612,7 @@ module_eval(<<'.,.,', 'parser.racc', 86)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 92)
+module_eval(<<'.,.,', 'parser.racc', 93)
   def _reduce_27(val, _values, result)
           result = Rift::Nodes::Const.new(val[1], val[2], val[4])
     
@@ -619,7 +620,7 @@ module_eval(<<'.,.,', 'parser.racc', 92)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 97)
+module_eval(<<'.,.,', 'parser.racc', 98)
   def _reduce_28(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[0])
     
@@ -627,7 +628,7 @@ module_eval(<<'.,.,', 'parser.racc', 97)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 100)
+module_eval(<<'.,.,', 'parser.racc', 101)
   def _reduce_29(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[0])
     
@@ -635,7 +636,7 @@ module_eval(<<'.,.,', 'parser.racc', 100)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 103)
+module_eval(<<'.,.,', 'parser.racc', 104)
   def _reduce_30(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[0])
     
@@ -643,7 +644,7 @@ module_eval(<<'.,.,', 'parser.racc', 103)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 106)
+module_eval(<<'.,.,', 'parser.racc', 107)
   def _reduce_31(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[0], true)
     
@@ -655,7 +656,7 @@ module_eval(<<'.,.,', 'parser.racc', 106)
 
 # reduce 33 omitted
 
-module_eval(<<'.,.,', 'parser.racc', 113)
+module_eval(<<'.,.,', 'parser.racc', 114)
   def _reduce_34(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[1])
     
@@ -663,7 +664,7 @@ module_eval(<<'.,.,', 'parser.racc', 113)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 118)
+module_eval(<<'.,.,', 'parser.racc', 119)
   def _reduce_35(val, _values, result)
           result = val[0]
       result.push(val[1])
@@ -672,7 +673,7 @@ module_eval(<<'.,.,', 'parser.racc', 118)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 122)
+module_eval(<<'.,.,', 'parser.racc', 123)
   def _reduce_36(val, _values, result)
           result = []
     
@@ -680,7 +681,7 @@ module_eval(<<'.,.,', 'parser.racc', 122)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 127)
+module_eval(<<'.,.,', 'parser.racc', 128)
   def _reduce_37(val, _values, result)
           result = Rift::Nodes::ConstValue.new(val[1])
     
@@ -688,7 +689,7 @@ module_eval(<<'.,.,', 'parser.racc', 127)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 132)
+module_eval(<<'.,.,', 'parser.racc', 133)
   def _reduce_38(val, _values, result)
           result = val[0]
       result.store(val[1], val[3])
@@ -697,7 +698,7 @@ module_eval(<<'.,.,', 'parser.racc', 132)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 136)
+module_eval(<<'.,.,', 'parser.racc', 137)
   def _reduce_39(val, _values, result)
           result = {}
     
@@ -705,7 +706,7 @@ module_eval(<<'.,.,', 'parser.racc', 136)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 141)
+module_eval(<<'.,.,', 'parser.racc', 142)
   def _reduce_40(val, _values, result)
           result = Rift::Nodes::Struct::TYPE_STRUCT
     
@@ -713,7 +714,7 @@ module_eval(<<'.,.,', 'parser.racc', 141)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 144)
+module_eval(<<'.,.,', 'parser.racc', 145)
   def _reduce_41(val, _values, result)
           result = Rift::Nodes::Struct::TYPE_UNION
     
@@ -721,7 +722,7 @@ module_eval(<<'.,.,', 'parser.racc', 144)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 149)
+module_eval(<<'.,.,', 'parser.racc', 150)
   def _reduce_42(val, _values, result)
           result = Rift::Nodes::Struct.new
       result.type = val[0]
@@ -734,7 +735,7 @@ module_eval(<<'.,.,', 'parser.racc', 149)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 159)
+module_eval(<<'.,.,', 'parser.racc', 160)
   def _reduce_43(val, _values, result)
           result = true
     
@@ -742,7 +743,7 @@ module_eval(<<'.,.,', 'parser.racc', 159)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 162)
+module_eval(<<'.,.,', 'parser.racc', 163)
   def _reduce_44(val, _values, result)
           result = false
     
@@ -750,7 +751,7 @@ module_eval(<<'.,.,', 'parser.racc', 162)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 167)
+module_eval(<<'.,.,', 'parser.racc', 168)
   def _reduce_45(val, _values, result)
           result = true
     
@@ -758,7 +759,7 @@ module_eval(<<'.,.,', 'parser.racc', 167)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 170)
+module_eval(<<'.,.,', 'parser.racc', 171)
   def _reduce_46(val, _values, result)
           result = false
     
@@ -766,7 +767,7 @@ module_eval(<<'.,.,', 'parser.racc', 170)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 175)
+module_eval(<<'.,.,', 'parser.racc', 176)
   def _reduce_47(val, _values, result)
           result = true
     
@@ -774,7 +775,7 @@ module_eval(<<'.,.,', 'parser.racc', 175)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 178)
+module_eval(<<'.,.,', 'parser.racc', 179)
   def _reduce_48(val, _values, result)
           result = false
     
@@ -782,7 +783,7 @@ module_eval(<<'.,.,', 'parser.racc', 178)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 183)
+module_eval(<<'.,.,', 'parser.racc', 184)
   def _reduce_49(val, _values, result)
           result = val[2]
     
@@ -790,7 +791,7 @@ module_eval(<<'.,.,', 'parser.racc', 183)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 186)
+module_eval(<<'.,.,', 'parser.racc', 187)
   def _reduce_50(val, _values, result)
           result = nil
     
@@ -798,7 +799,7 @@ module_eval(<<'.,.,', 'parser.racc', 186)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 191)
+module_eval(<<'.,.,', 'parser.racc', 192)
   def _reduce_51(val, _values, result)
           result = Rift::Nodes::Exception.new(val[1], val[3])
       result.annotations = val[5]
@@ -807,7 +808,7 @@ module_eval(<<'.,.,', 'parser.racc', 191)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 197)
+module_eval(<<'.,.,', 'parser.racc', 198)
   def _reduce_52(val, _values, result)
           result = Rift::Nodes::Service.new(val[1], val[2], val[4])
       result.annotations = val[6]
@@ -816,7 +817,7 @@ module_eval(<<'.,.,', 'parser.racc', 197)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 203)
+module_eval(<<'.,.,', 'parser.racc', 204)
   def _reduce_53(val, _values, result)
           result = val[1]
     
@@ -824,7 +825,7 @@ module_eval(<<'.,.,', 'parser.racc', 203)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 206)
+module_eval(<<'.,.,', 'parser.racc', 207)
   def _reduce_54(val, _values, result)
           result = nil
     
@@ -832,7 +833,7 @@ module_eval(<<'.,.,', 'parser.racc', 206)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 211)
+module_eval(<<'.,.,', 'parser.racc', 212)
   def _reduce_55(val, _values, result)
           result = val[0]
       result.push(val[1])
@@ -841,7 +842,7 @@ module_eval(<<'.,.,', 'parser.racc', 211)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 215)
+module_eval(<<'.,.,', 'parser.racc', 216)
   def _reduce_56(val, _values, result)
           result = []
     
@@ -849,7 +850,7 @@ module_eval(<<'.,.,', 'parser.racc', 215)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 221)
+module_eval(<<'.,.,', 'parser.racc', 222)
   def _reduce_57(val, _values, result)
             result = Rift::Nodes::Function.new(val[2], val[3], val[5], val[1])
         result.exceptions = val[7]
@@ -859,7 +860,7 @@ module_eval(<<'.,.,', 'parser.racc', 221)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 228)
+module_eval(<<'.,.,', 'parser.racc', 229)
   def _reduce_58(val, _values, result)
           result = true
     
@@ -867,7 +868,7 @@ module_eval(<<'.,.,', 'parser.racc', 228)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 231)
+module_eval(<<'.,.,', 'parser.racc', 232)
   def _reduce_59(val, _values, result)
           result = false
     
@@ -875,7 +876,7 @@ module_eval(<<'.,.,', 'parser.racc', 231)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 236)
+module_eval(<<'.,.,', 'parser.racc', 237)
   def _reduce_60(val, _values, result)
           result = val[2]
     
@@ -883,7 +884,7 @@ module_eval(<<'.,.,', 'parser.racc', 236)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 239)
+module_eval(<<'.,.,', 'parser.racc', 240)
   def _reduce_61(val, _values, result)
           result = []
     
@@ -891,7 +892,7 @@ module_eval(<<'.,.,', 'parser.racc', 239)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 244)
+module_eval(<<'.,.,', 'parser.racc', 245)
   def _reduce_62(val, _values, result)
           result = val[0]
       result.push(val[1])
@@ -900,7 +901,7 @@ module_eval(<<'.,.,', 'parser.racc', 244)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 248)
+module_eval(<<'.,.,', 'parser.racc', 249)
   def _reduce_63(val, _values, result)
           reset_field_identifier_value
       result = []
@@ -909,7 +910,7 @@ module_eval(<<'.,.,', 'parser.racc', 248)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 255)
+module_eval(<<'.,.,', 'parser.racc', 256)
   def _reduce_64(val, _values, result)
             result = Rift::Nodes::Field.new(val[3], val[4], val[1], val[5])
         result.requiredness = val[2]
@@ -921,7 +922,7 @@ module_eval(<<'.,.,', 'parser.racc', 255)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 264)
+module_eval(<<'.,.,', 'parser.racc', 265)
   def _reduce_65(val, _values, result)
           result = Rift::Nodes::FieldIdentifier.new(val[0])
     
@@ -929,7 +930,7 @@ module_eval(<<'.,.,', 'parser.racc', 264)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 267)
+module_eval(<<'.,.,', 'parser.racc', 268)
   def _reduce_66(val, _values, result)
           value = gen_field_identifier_value
       result = Rift::Nodes::FieldIdentifier.new(value, true)
@@ -938,7 +939,7 @@ module_eval(<<'.,.,', 'parser.racc', 267)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 273)
+module_eval(<<'.,.,', 'parser.racc', 274)
   def _reduce_67(val, _values, result)
           result = Rift::Nodes::Field::REQUIREDNESS_REQUIRED
     
@@ -946,7 +947,7 @@ module_eval(<<'.,.,', 'parser.racc', 273)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 276)
+module_eval(<<'.,.,', 'parser.racc', 277)
   def _reduce_68(val, _values, result)
           result = Rift::Nodes::Field::REQUIREDNESS_OPTIONAL
     
@@ -954,7 +955,7 @@ module_eval(<<'.,.,', 'parser.racc', 276)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 279)
+module_eval(<<'.,.,', 'parser.racc', 280)
   def _reduce_69(val, _values, result)
           result = Rift::Nodes::Field::REQUIREDNESS_OPT_IN_REQ_OUT
     
@@ -962,7 +963,7 @@ module_eval(<<'.,.,', 'parser.racc', 279)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 284)
+module_eval(<<'.,.,', 'parser.racc', 285)
   def _reduce_70(val, _values, result)
           result = val[1]
     
@@ -970,7 +971,7 @@ module_eval(<<'.,.,', 'parser.racc', 284)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 287)
+module_eval(<<'.,.,', 'parser.racc', 288)
   def _reduce_71(val, _values, result)
           result = nil
     
@@ -982,7 +983,7 @@ module_eval(<<'.,.,', 'parser.racc', 287)
 
 # reduce 73 omitted
 
-module_eval(<<'.,.,', 'parser.racc', 295)
+module_eval(<<'.,.,', 'parser.racc', 296)
   def _reduce_74(val, _values, result)
           type = Rift::Nodes::FieldType::TYPE_USER_DEFINED
       result = Rift::Nodes::FieldType.new(type, val[0])
@@ -991,7 +992,7 @@ module_eval(<<'.,.,', 'parser.racc', 295)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 299)
+module_eval(<<'.,.,', 'parser.racc', 300)
   def _reduce_75(val, _values, result)
           type = Rift::Nodes::FieldType::TYPE_PRIMITIVE
       result = Rift::Nodes::FieldType.new(type, val[0])
@@ -1000,7 +1001,7 @@ module_eval(<<'.,.,', 'parser.racc', 299)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 303)
+module_eval(<<'.,.,', 'parser.racc', 304)
   def _reduce_76(val, _values, result)
           type = Rift::Nodes::FieldType::TYPE_PRIMITIVE
       result = Rift::Nodes::FieldType.new(type, val[0])
@@ -1009,7 +1010,7 @@ module_eval(<<'.,.,', 'parser.racc', 303)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 309)
+module_eval(<<'.,.,', 'parser.racc', 310)
   def _reduce_77(val, _values, result)
           result = Rift::Nodes::BaseType.new(val[0])
       result.annotations = val[1]
@@ -1018,7 +1019,7 @@ module_eval(<<'.,.,', 'parser.racc', 309)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 315)
+module_eval(<<'.,.,', 'parser.racc', 316)
   def _reduce_78(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_STRING
     
@@ -1026,7 +1027,7 @@ module_eval(<<'.,.,', 'parser.racc', 315)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 318)
+module_eval(<<'.,.,', 'parser.racc', 319)
   def _reduce_79(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_BINARY
     
@@ -1034,7 +1035,7 @@ module_eval(<<'.,.,', 'parser.racc', 318)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 321)
+module_eval(<<'.,.,', 'parser.racc', 322)
   def _reduce_80(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_BOOL
     
@@ -1042,7 +1043,7 @@ module_eval(<<'.,.,', 'parser.racc', 321)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 324)
+module_eval(<<'.,.,', 'parser.racc', 325)
   def _reduce_81(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_BYTE
     
@@ -1050,7 +1051,7 @@ module_eval(<<'.,.,', 'parser.racc', 324)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 327)
+module_eval(<<'.,.,', 'parser.racc', 328)
   def _reduce_82(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_I16
     
@@ -1058,7 +1059,7 @@ module_eval(<<'.,.,', 'parser.racc', 327)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 330)
+module_eval(<<'.,.,', 'parser.racc', 331)
   def _reduce_83(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_I32
     
@@ -1066,7 +1067,7 @@ module_eval(<<'.,.,', 'parser.racc', 330)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 333)
+module_eval(<<'.,.,', 'parser.racc', 334)
   def _reduce_84(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_I64
     
@@ -1074,7 +1075,7 @@ module_eval(<<'.,.,', 'parser.racc', 333)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 336)
+module_eval(<<'.,.,', 'parser.racc', 337)
   def _reduce_85(val, _values, result)
           result = Rift::Nodes::BaseType::TYPE_DOUBLE
     
@@ -1082,7 +1083,7 @@ module_eval(<<'.,.,', 'parser.racc', 336)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 341)
+module_eval(<<'.,.,', 'parser.racc', 342)
   def _reduce_86(val, _values, result)
           result = val[0]
       result.annotations = val[1]
@@ -1097,7 +1098,7 @@ module_eval(<<'.,.,', 'parser.racc', 341)
 
 # reduce 89 omitted
 
-module_eval(<<'.,.,', 'parser.racc', 350)
+module_eval(<<'.,.,', 'parser.racc', 351)
   def _reduce_90(val, _values, result)
           result = Rift::Nodes::MapType.new(val[3], val[5])
       result.cpp_name = val[1]
@@ -1106,7 +1107,7 @@ module_eval(<<'.,.,', 'parser.racc', 350)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 356)
+module_eval(<<'.,.,', 'parser.racc', 357)
   def _reduce_91(val, _values, result)
           result = Rift::Nodes::SetType.new(val[3])
       result.cpp_name = val[1]
@@ -1115,7 +1116,7 @@ module_eval(<<'.,.,', 'parser.racc', 356)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 362)
+module_eval(<<'.,.,', 'parser.racc', 363)
   def _reduce_92(val, _values, result)
           result = Rift::Nodes::ListType.new(val[3])
       result.cpp_name = val[1]
@@ -1124,7 +1125,7 @@ module_eval(<<'.,.,', 'parser.racc', 362)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 368)
+module_eval(<<'.,.,', 'parser.racc', 369)
   def _reduce_93(val, _values, result)
           result = val[1]
     
@@ -1132,7 +1133,7 @@ module_eval(<<'.,.,', 'parser.racc', 368)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 371)
+module_eval(<<'.,.,', 'parser.racc', 372)
   def _reduce_94(val, _values, result)
           result = nil
     
@@ -1140,7 +1141,7 @@ module_eval(<<'.,.,', 'parser.racc', 371)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 376)
+module_eval(<<'.,.,', 'parser.racc', 377)
   def _reduce_95(val, _values, result)
           result = val[1]
     
@@ -1148,7 +1149,7 @@ module_eval(<<'.,.,', 'parser.racc', 376)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 379)
+module_eval(<<'.,.,', 'parser.racc', 380)
   def _reduce_96(val, _values, result)
           result = nil
     
@@ -1156,7 +1157,7 @@ module_eval(<<'.,.,', 'parser.racc', 379)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 384)
+module_eval(<<'.,.,', 'parser.racc', 385)
   def _reduce_97(val, _values, result)
           annotation = val[1]
       result.store(annotation[0], annotation[1])
@@ -1165,7 +1166,7 @@ module_eval(<<'.,.,', 'parser.racc', 384)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 388)
+module_eval(<<'.,.,', 'parser.racc', 389)
   def _reduce_98(val, _values, result)
           result = {}
     
@@ -1173,7 +1174,7 @@ module_eval(<<'.,.,', 'parser.racc', 388)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 393)
+module_eval(<<'.,.,', 'parser.racc', 394)
   def _reduce_99(val, _values, result)
           result = [val[0], val[2]]
     
@@ -1181,21 +1182,21 @@ module_eval(<<'.,.,', 'parser.racc', 393)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 397)
+module_eval(<<'.,.,', 'parser.racc', 398)
   def _reduce_100(val, _values, result)
      
     result
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 398)
+module_eval(<<'.,.,', 'parser.racc', 399)
   def _reduce_101(val, _values, result)
      
     result
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 399)
+module_eval(<<'.,.,', 'parser.racc', 400)
   def _reduce_102(val, _values, result)
      
     result

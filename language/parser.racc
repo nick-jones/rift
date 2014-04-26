@@ -59,7 +59,8 @@ rule
 
   typedef
     : TYPEDEF field_type IDENTIFIER type_annotations {
-      result = Rift::Nodes::Typedef.new(val[1], val[2], val[3])
+      result = Rift::Nodes::Typedef.new(val[1], val[2])
+      result.annotations = val[3]
     }
 
   enum
