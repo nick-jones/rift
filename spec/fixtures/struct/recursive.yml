@@ -1,0 +1,19 @@
+- !ruby/object:Rift::Nodes::Struct
+  annotations:
+  members:
+  - !ruby/object:Rift::Nodes::Field
+    identifier: !ruby/object:Rift::Nodes::FieldIdentifier
+      auto_assigned: false
+      value: 1
+    name: a
+    requiredness: required
+    type: !ruby/object:Rift::Nodes::FieldType
+      type: user_defined
+      value: X
+    value:
+    xsd_attributes:
+    xsd_nillable: false
+    xsd_optional: false
+  name: X
+  type: struct
+  xsd_all: false
