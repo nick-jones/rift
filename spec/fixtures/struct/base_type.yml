@@ -7,6 +7,7 @@
       auto_assigned: false
       value: 1
     name: a
+    reference: false
     requiredness: required
     type: !ruby/object:Rift::Nodes::FieldType
       type: primitive
@@ -22,6 +23,7 @@
       auto_assigned: false
       value: 2
     name: b
+    reference: false
     requiredness: required
     type: !ruby/object:Rift::Nodes::FieldType
       type: primitive

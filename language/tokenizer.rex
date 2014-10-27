@@ -60,6 +60,7 @@ rule
 
   {SYMBOL}                  { [text, text] }
   \*                        { [text, text] }
+  &                         { [:REFERENCE, text] }
   {BOOL}                    { [:CONSTANT_INT, text == "true" ? 1 : 0] }
 
   {B}namespace{B}           { [:NAMESPACE, text] }

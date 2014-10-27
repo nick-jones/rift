@@ -86,6 +86,9 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\*/))
          action { [text, text] }
 
+      when (text = @ss.scan(/&/))
+         action { [:REFERENCE, text] }
+
       when (text = @ss.scan(/true|false/))
          action { [:CONSTANT_INT, text == "true" ? 1 : 0] }
 

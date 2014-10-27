@@ -1,4 +1,3 @@
----
 - !ruby/object:Rift::Nodes::Struct
   annotations:
   members:
@@ -7,17 +6,15 @@
       auto_assigned: false
       value: 1
     name: a
-    reference: false
-    requiredness: optional
+    reference: true
+    requiredness: required
     type: !ruby/object:Rift::Nodes::FieldType
-      type: primitive
-      value: !ruby/object:Rift::Nodes::BaseType
-        annotations:
-        type: i32
+      type: user_defined
+      value: X
     value:
     xsd_attributes:
     xsd_nillable: false
     xsd_optional: false
   name: X
-  type: union
+  type: struct
   xsd_all: false

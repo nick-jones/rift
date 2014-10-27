@@ -11,6 +11,7 @@
         auto_assigned: false
         value: 1
       name: x
+      reference: false
       requiredness: opt_in_req_out
       type: !ruby/object:Rift::Nodes::FieldType 
         type: primitive
@@ -37,6 +38,7 @@
         auto_assigned: false
         value: 1
       name: y
+      reference: false
       requiredness: opt_in_req_out
       type: !ruby/object:Rift::Nodes::FieldType 
         type: user_defined
@@ -50,6 +52,7 @@
         auto_assigned: false
         value: 2
       name: z
+      reference: false
       requiredness: opt_in_req_out
       type: !ruby/object:Rift::Nodes::FieldType 
         type: primitive

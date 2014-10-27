@@ -38,6 +38,13 @@ describe Rift::Parser, "when defining a struct" do
     }
   end
 
+  context "with members of the declared struct indicated as references" do
+    it {
+      expression = "struct X { 1: required X & a; }"
+      expect(parser.parse(expression)).to equal_tree "spec/fixtures/struct/recursive_reference.yml"
+    }
+  end
+
   context "with some members lacking field identifiers" do
     it {
       expression = "struct X { required i32 a; required i32 b; 4: required i32 c; }"

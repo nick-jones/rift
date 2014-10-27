@@ -9,6 +9,7 @@ module Rift
       attr_accessor :name
       attr_accessor :identifier
       attr_accessor :value
+      attr_accessor :reference
       attr_accessor :requiredness
       attr_accessor :xsd_optional
       attr_accessor :xsd_nillable

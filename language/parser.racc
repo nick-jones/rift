@@ -252,13 +252,14 @@ rule
     }
 
   field
-    : capture_doc_text field_identifier field_requiredness field_type IDENTIFIER field_value
-      xsd_optional xsd_nillable xsd_attributes type_annotations comma_or_semicolon_optional {
-        result = Rift::Nodes::Field.new(val[3], val[4], val[1], val[5])
+    : capture_doc_text field_identifier field_requiredness field_type field_reference IDENTIFIER
+      field_value xsd_optional xsd_nillable xsd_attributes type_annotations comma_or_semicolon_optional {
+        result = Rift::Nodes::Field.new(val[3], val[5], val[1], val[6])
+        result.reference = val[4]
         result.requiredness = val[2]
-        result.xsd_optional = val[6]
-        result.xsd_nillable = val[7]
-        result.xsd_attributes = val[8]
+        result.xsd_optional = val[7]
+        result.xsd_nillable = val[8]
+        result.xsd_attributes = val[9]
       }
 
   field_identifier
@@ -268,6 +269,14 @@ rule
     | /* empty */ {
       value = gen_field_identifier_value
       result = Rift::Nodes::FieldIdentifier.new(value, true)
+    }
+
+  field_reference
+    : REFERENCE {
+      result = true
+    }
+    | /* empty */ {
+      result = false
     }
 
   field_requiredness

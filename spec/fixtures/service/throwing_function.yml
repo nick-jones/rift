@@ -12,6 +12,7 @@
         auto_assigned: false
         value: 1
       name: xe
+      reference: false
       requiredness: opt_in_req_out
       type: !ruby/object:Rift::Nodes::FieldType 
         type: user_defined
@@ -25,6 +26,7 @@
         auto_assigned: false
         value: 2
       name: ye
+      reference: false
       requiredness: opt_in_req_out
       type: !ruby/object:Rift::Nodes::FieldType 
         type: user_defined
