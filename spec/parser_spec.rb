@@ -21,7 +21,7 @@ describe Rift::Parser do
 
     context "with valid thrift IDL" do
       it "return a syntax tree" do
-        expect(parser.parse("struct X { }")).to have(1).items
+        expect(parser.parse("struct X { }").size).to eq(1)
       end
     end
 
@@ -44,7 +44,7 @@ describe Rift::Parser do
         struct Y { 1: required /*comment */ i32 x; }
       eos
 
-      expect(parser.parse(expression)).to have(2).items
+      expect(parser.parse(expression).size).to eq(2)
     end
   end
 end
