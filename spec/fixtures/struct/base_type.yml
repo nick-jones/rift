@@ -3,6 +3,7 @@
   annotations:
   members:
   - !ruby/object:Rift::Nodes::Field
+    annotations:
     identifier: !ruby/object:Rift::Nodes::FieldIdentifier
       auto_assigned: false
       value: 1
@@ -19,6 +20,7 @@
     xsd_nillable: false
     xsd_optional: false
   - !ruby/object:Rift::Nodes::Field
+    annotations:
     identifier: !ruby/object:Rift::Nodes::FieldIdentifier
       auto_assigned: false
       value: 2

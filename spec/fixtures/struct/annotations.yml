@@ -1,19 +1,24 @@
-- !ruby/object:Rift::Nodes::Struct
-  annotations:
+--- 
+- !ruby/object:Rift::Nodes::Struct 
+  annotations: 
+    baz: que
   members:
   - !ruby/object:Rift::Nodes::Field
     annotations:
+      foo: bar
     identifier: !ruby/object:Rift::Nodes::FieldIdentifier
       auto_assigned: false
       value: 1
     name: a
     reference: false
-    requiredness: required
+    requiredness: opt_in_req_out
     type: !ruby/object:Rift::Nodes::FieldType
-      type: user_defined
-      value: X
+      type: primitive
+      value: !ruby/object:Rift::Nodes::BaseType
+        annotations:
+        type: i32
     value:
-    xsd_attributes:
+    xsd_attributes: 
     xsd_nillable: false
     xsd_optional: false
   name: X

@@ -6,7 +6,8 @@
   - !ruby/object:Rift::Nodes::Function 
     annotations: 
     arguments: 
-    - !ruby/object:Rift::Nodes::Field 
+    - !ruby/object:Rift::Nodes::Field
+      annotations:
       identifier: !ruby/object:Rift::Nodes::FieldIdentifier 
         auto_assigned: false
         value: 1
@@ -33,7 +34,8 @@
   - !ruby/object:Rift::Nodes::Function 
     annotations: 
     arguments: 
-    - !ruby/object:Rift::Nodes::Field 
+    - !ruby/object:Rift::Nodes::Field
+      annotations:
       identifier: !ruby/object:Rift::Nodes::FieldIdentifier 
         auto_assigned: false
         value: 1
@@ -47,7 +49,8 @@
       xsd_attributes: 
       xsd_nillable: false
       xsd_optional: false
-    - !ruby/object:Rift::Nodes::Field 
+    - !ruby/object:Rift::Nodes::Field
+      annotations:
       identifier: !ruby/object:Rift::Nodes::FieldIdentifier 
         auto_assigned: false
         value: 2

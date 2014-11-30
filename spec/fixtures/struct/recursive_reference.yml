@@ -2,6 +2,7 @@
   annotations:
   members:
   - !ruby/object:Rift::Nodes::Field
+    annotations:
     identifier: !ruby/object:Rift::Nodes::FieldIdentifier
       auto_assigned: false
       value: 1

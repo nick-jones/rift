@@ -260,6 +260,7 @@ rule
         result.xsd_optional = val[7]
         result.xsd_nillable = val[8]
         result.xsd_attributes = val[9]
+        result.annotations = val[10]
       }
 
   field_identifier

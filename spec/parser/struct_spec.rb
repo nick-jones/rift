@@ -80,4 +80,11 @@ describe Rift::Parser, "when defining a struct" do
       }.to raise_error "Unexpected token CONSTANT_INT '1' on line 1"
     }
   end
+
+  context "with annotations" do
+    it {
+      expression = 'struct X { 1: i32 a ( foo = "bar" ); } ( baz = "que" )'
+      expect(parser.parse(expression)).to equal_tree "spec/fixtures/struct/annotations.yml"
+    }
+  end
 end
