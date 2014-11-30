@@ -2,6 +2,7 @@
 - !ruby/object:Rift::Nodes::Struct 
   annotations: 
     baz: que
+    valueless: 1
   members:
   - !ruby/object:Rift::Nodes::Field
     annotations:

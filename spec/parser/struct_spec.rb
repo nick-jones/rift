@@ -83,7 +83,7 @@ describe Rift::Parser, "when defining a struct" do
 
   context "with annotations" do
     it {
-      expression = 'struct X { 1: i32 a ( foo = "bar" ); } ( baz = "que" )'
+      expression = 'struct X { 1: i32 a ( foo = "bar" ); } ( baz = "que", valueless )'
       expect(parser.parse(expression)).to equal_tree "spec/fixtures/struct/annotations.yml"
     }
   end

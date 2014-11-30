@@ -401,8 +401,16 @@ rule
     }
 
   type_annotation
-    : IDENTIFIER '=' LITERAL comma_or_semicolon_optional {
-      result = [val[0], val[2]]
+    : IDENTIFIER type_annotation_value comma_or_semicolon_optional {
+      result = [val[0], val[1]]
+    }
+
+  type_annotation_value
+    : '=' LITERAL {
+      result = val[1]
+    }
+    | /* empty */ {
+      result = 1
     }
 
   comma_or_semicolon_optional
