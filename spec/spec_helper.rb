@@ -13,7 +13,6 @@ end
 
 RSpec::Matchers.define :equal_tree do |expected|
   match do |actual|
-    YAML::ENGINE.yamler = 'syck'
     @nodes = YAML::load_file(expected)
     @nodes == actual
   end

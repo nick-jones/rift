@@ -14,7 +14,6 @@ module Rift
       file = File.open(file_path, "rb")
       nodes = parser.parse(file.read)
 
-      YAML::ENGINE.yamler = 'syck'
       $stdout.puts nodes.to_yaml
     end
   end

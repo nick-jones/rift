@@ -1,4 +1,4 @@
 ---
 - !ruby/object:Rift::Nodes::Namespace
-  language: *
+  language: '*'
   value: example
