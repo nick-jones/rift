@@ -10,6 +10,12 @@ describe Rift::Parser, "when defining a typedef" do
     }
   end
 
+  context "with a trailing semicolon" do
+    it {
+      expect(parser.parse("typedef i32 X;")).to equal_tree "spec/fixtures/typedef/base_type.yml"
+    }
+  end
+
   context "with a container type of map" do
     it {
       expect(parser.parse("typedef map<i32,i32> X")).to equal_tree "spec/fixtures/typedef/container_type.yml"

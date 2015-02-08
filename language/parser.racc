@@ -58,7 +58,7 @@ rule
     : typedef | enum | senum | struct | exception
 
   typedef
-    : TYPEDEF field_type IDENTIFIER type_annotations {
+    : TYPEDEF field_type IDENTIFIER type_annotations comma_or_semicolon_optional {
       result = Rift::Nodes::Typedef.new(val[1], val[2])
       result.annotations = val[3]
     }
