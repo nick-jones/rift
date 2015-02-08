@@ -80,13 +80,17 @@ rule
     }
 
   enum_def
-    : capture_doc_text IDENTIFIER '=' CONSTANT_INT type_annotations comma_or_semicolon_optional {
-      result = Rift::Nodes::EnumValue.new(val[1], val[3])
-      result.annotations = val[4]
-    }
-    | capture_doc_text IDENTIFIER type_annotations comma_or_semicolon_optional {
-      result = Rift::Nodes::EnumValue.new(val[1])
+    : capture_doc_text enum_value type_annotations comma_or_semicolon_optional {
+      result = val[1]
       result.annotations = val[2]
+    }
+
+  enum_value
+    : IDENTIFIER '=' CONSTANT_INT {
+      result = Rift::Nodes::EnumValue.new(val[0], val[2])
+    }
+    | IDENTIFIER {
+      result = Rift::Nodes::EnumValue.new(val[0])
     }
 
   const
