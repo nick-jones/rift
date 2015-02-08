@@ -26,8 +26,9 @@ describe Rift::CLI do
 
   context "when a valid thrift file is supplied" do
     it "should output a YAML representation of the equivalent syntax tree" do
-      $stdout.should_receive(:puts).with("--- \"\"\n")
-      Rift::CLI.run(["spec/fixtures/empty.thrift"], StubParser.new)
+      expect {
+        Rift::CLI.run(["spec/fixtures/empty.thrift"], StubParser.new)
+      }.to output("--- ''\n").to_stdout
     end
   end
 end
