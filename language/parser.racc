@@ -418,9 +418,9 @@ rule
     }
 
   comma_or_semicolon_optional
-    : ',' { }
-    | ';' { }
-    | /* empty */ { }
+    : ','
+    | ';'
+    | /* empty */
 end
 
 ----- header -----

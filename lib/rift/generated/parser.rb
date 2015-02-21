@@ -278,9 +278,9 @@ racc_reduce_table = [
   3, 106, :_reduce_102,
   2, 107, :_reduce_103,
   0, 107, :_reduce_104,
-  1, 71, :_reduce_105,
-  1, 71, :_reduce_106,
-  0, 71, :_reduce_107 ]
+  1, 71, :_reduce_none,
+  1, 71, :_reduce_none,
+  0, 71, :_reduce_none ]
 
 racc_reduce_n = 108
 
@@ -1233,26 +1233,11 @@ module_eval(<<'.,.,', 'parser.racc', 416)
   end
 .,.,
 
-module_eval(<<'.,.,', 'parser.racc', 420)
-  def _reduce_105(val, _values, result)
-     
-    result
-  end
-.,.,
+# reduce 105 omitted
 
-module_eval(<<'.,.,', 'parser.racc', 421)
-  def _reduce_106(val, _values, result)
-     
-    result
-  end
-.,.,
+# reduce 106 omitted
 
-module_eval(<<'.,.,', 'parser.racc', 422)
-  def _reduce_107(val, _values, result)
-     
-    result
-  end
-.,.,
+# reduce 107 omitted
 
 def _reduce_none(val, _values, result)
   val[0]
