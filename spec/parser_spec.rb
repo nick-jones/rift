@@ -5,7 +5,7 @@ describe Rift::Parser do
   let(:parser) { Rift::Parser.new }
 
   describe ".on_error" do
-    it "raises an parse error" do
+    it "should raise a parse error" do
       expect {
         parser.on_error(3, 'a', [])
       }.to raise_error "Unexpected token IDENTIFIER 'a' on line "
@@ -14,13 +14,13 @@ describe Rift::Parser do
 
   describe ".parse" do
     context "with an empty string" do
-      it "return an empty array" do
+      it "should return an empty array" do
         expect(parser.parse("")).to be_empty
       end
     end
 
     context "with valid thrift IDL" do
-      it "return a syntax tree" do
+      it "should return a syntax tree" do
         expect(parser.parse("struct X { }").size).to eq(1)
       end
     end

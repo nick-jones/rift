@@ -17,8 +17,8 @@ describe Rift::Nodes::Const do
       exception = Rift::Nodes::Field.new(nil, 'x')
       node.exceptions = [exception]
       node.accept(visitor)
-      expect(return_type).to have_received(:accept).with(visitor)
-      expect(argument).to have_received(:accept).with(visitor)
+      expect(return_type).to have_received(:accept).with(visitor).once
+      expect(argument).to have_received(:accept).with(visitor).once
       expect(visitor).to have_received(:visit).with(node).once
     end
   end

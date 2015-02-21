@@ -13,7 +13,7 @@ describe Rift::Nodes::Const do
       allow(visitor).to receive(:visit)
 
       node.accept(visitor)
-      expect(element_type).to have_received(:accept).with(visitor)
+      expect(element_type).to have_received(:accept).with(visitor).once
       expect(visitor).to have_received(:visit).with(node).once
     end
   end
