@@ -10,9 +10,33 @@ describe Rift::Parser, "when defining a const" do
     }
   end
 
+  context "with a negative 32-bit integer value -1" do
+    it {
+      expect(parser.parse("const i32 X = -1")).to equal_tree "spec/fixtures/const/negative_int.yml"
+    }
+  end
+
   context "with a double value 1.0" do
     it {
       expect(parser.parse("const double X = 1.0")).to equal_tree "spec/fixtures/const/double.yml"
+    }
+  end
+
+  context "with a negative double value -1.0" do
+    it {
+      expect(parser.parse("const double X = -1.0")).to equal_tree "spec/fixtures/const/negative_double.yml"
+    }
+  end
+
+  context "with a hex value 0xA" do
+    it {
+      expect(parser.parse("const i32 X = 0xA")).to equal_tree "spec/fixtures/const/hex.yml"
+    }
+  end
+
+  context "with a negative hex value -0xA" do
+    it {
+      expect(parser.parse("const i32 X = -0xA")).to equal_tree "spec/fixtures/const/negative_hex.yml"
     }
   end
 

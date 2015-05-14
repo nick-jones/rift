@@ -1,0 +1,11 @@
+---
+- !ruby/object:Rift::Nodes::Const
+  name: X
+  type: !ruby/object:Rift::Nodes::FieldType
+    type: primitive
+    value: !ruby/object:Rift::Nodes::BaseType
+      annotations:
+      type: i32
+  value: !ruby/object:Rift::Nodes::ConstValue
+    value: 10
+    identifier: false

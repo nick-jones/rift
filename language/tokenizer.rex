@@ -32,7 +32,7 @@ inner
 
 macro
   CONSTANT_INT              [+-]?[0-9]+
-  CONSTANT_HEX              0x[0-9A-Fa-f]+
+  CONSTANT_HEX              [+-]?0x[0-9A-Fa-f]+
   CONSTANT_DOUBLE           [+-]?([0-9]+\.([0-9]+)?|(\.[0-9]+))([eE][+-]?[0-9]+)?
   IDENTIFIER                [a-zA-Z_](\.[a-zA-Z_0-9]|[a-zA-Z_0-9])*
   WHITESPACE                [\s]+

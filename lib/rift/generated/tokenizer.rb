@@ -581,7 +581,7 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/[+-]?([0-9]+\.([0-9]+)?|(\.[0-9]+))([eE][+-]?[0-9]+)?/))
          action { [:CONSTANT_DOUBLE, text.to_f] }
 
-      when (text = @ss.scan(/0x[0-9A-Fa-f]+/))
+      when (text = @ss.scan(/[+-]?0x[0-9A-Fa-f]+/))
          action { [:CONSTANT_INT, text.to_i(16)] }
 
       when (text = @ss.scan(/[+-]?[0-9]+/))
