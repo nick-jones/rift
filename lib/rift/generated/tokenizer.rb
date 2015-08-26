@@ -467,6 +467,9 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\bor\b/))
          action { reserved_keyword(text) }
 
+      when (text = @ss.scan(/\bpackage\b/))
+         action { reserved_keyword(text) }
+
       when (text = @ss.scan(/\bpass\b/))
          action { reserved_keyword(text) }
 

@@ -190,6 +190,7 @@ rule
   {B}nil{B}                 { reserved_keyword(text) }
   {B}not{B}                 { reserved_keyword(text) }
   {B}or{B}                  { reserved_keyword(text) }
+  {B}package{B}             { reserved_keyword(text) }
   {B}pass{B}                { reserved_keyword(text) }
   {B}public{B}              { reserved_keyword(text) }
   {B}print{B}               { reserved_keyword(text) }
