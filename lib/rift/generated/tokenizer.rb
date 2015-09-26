@@ -410,6 +410,9 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\bforeach\b/))
          action { reserved_keyword(text) }
 
+      when (text = @ss.scan(/\bfrom\b/))
+         action { reserved_keyword(text) }
+
       when (text = @ss.scan(/\bfunction\b/))
          action { reserved_keyword(text) }
 

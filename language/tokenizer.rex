@@ -171,6 +171,7 @@ rule
   {B}float{B}               { reserved_keyword(text) }
   {B}for{B}                 { reserved_keyword(text) }
   {B}foreach{B}             { reserved_keyword(text) }
+  {B}from{B}                { reserved_keyword(text) }
   {B}function{B}            { reserved_keyword(text) }
   {B}global{B}              { reserved_keyword(text) }
   {B}goto{B}                { reserved_keyword(text) }
