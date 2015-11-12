@@ -85,7 +85,8 @@ rule
   {B}include{B}             { [:INCLUDE, text] }
   {B}void{B}                { [:VOID, text] }
   {B}bool{B}                { [:BOOL, text] }
-  {B}byte{B}                { [:BYTE, text] }
+  {B}byte{B}                { [:I8, text] }
+  {B}i8{B}                  { [:I8, text] }
   {B}i16{B}                 { [:I16, text] }
   {B}i32{B}                 { [:I32, text] }
   {B}i64{B}                 { [:I64, text] }

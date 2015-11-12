@@ -4,7 +4,7 @@ module Rift
       TYPE_VOID = "void"
       TYPE_STRING = "string"
       TYPE_BOOL = "bool"
-      TYPE_BYTE = "byte"
+      TYPE_I8 = "i8"
       TYPE_I16 = "i16"
       TYPE_I32 = "i32"
       TYPE_I64 = "i64"

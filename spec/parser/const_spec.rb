@@ -4,15 +4,21 @@ require "rift/parser"
 describe Rift::Parser, "when defining a const" do
   let(:parser) { Rift::Parser.new }
 
+  context "with a 8-bit int value 1" do
+    it {
+      expect(parser.parse("const i8 X = 1")).to equal_tree "spec/fixtures/const/int8.yml"
+    }
+  end
+
   context "with a 32-bit int value 1" do
     it {
-      expect(parser.parse("const i32 X = 1")).to equal_tree "spec/fixtures/const/int.yml"
+      expect(parser.parse("const i32 X = 1")).to equal_tree "spec/fixtures/const/int32.yml"
     }
   end
 
   context "with a negative 32-bit integer value -1" do
     it {
-      expect(parser.parse("const i32 X = -1")).to equal_tree "spec/fixtures/const/negative_int.yml"
+      expect(parser.parse("const i32 X = -1")).to equal_tree "spec/fixtures/const/negative_int32.yml"
     }
   end
 

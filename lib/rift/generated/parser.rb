@@ -327,7 +327,7 @@ racc_token_table = {
   :STRING => 37,
   :BINARY => 38,
   :BOOL => 39,
-  :BYTE => 40,
+  :I8 => 40,
   :I16 => 41,
   :I32 => 42,
   :I64 => 43,
@@ -402,7 +402,7 @@ Racc_token_to_s_table = [
   "STRING",
   "BINARY",
   "BOOL",
-  "BYTE",
+  "I8",
   "I16",
   "I32",
   "I64",
@@ -1080,7 +1080,7 @@ module_eval(<<'.,.,', 'parser.racc', 336)
 
 module_eval(<<'.,.,', 'parser.racc', 339)
   def _reduce_84(val, _values, result)
-          result = Rift::Nodes::BaseType::TYPE_BYTE
+          result = Rift::Nodes::BaseType::TYPE_I8
     
     result
   end

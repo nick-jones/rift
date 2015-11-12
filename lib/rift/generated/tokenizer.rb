@@ -159,7 +159,10 @@ class Tokenizer < Racc::Parser
          action { [:BOOL, text] }
 
       when (text = @ss.scan(/\bbyte\b/))
-         action { [:BYTE, text] }
+         action { [:I8, text] }
+
+      when (text = @ss.scan(/\bi8\b/))
+         action { [:I8, text] }
 
       when (text = @ss.scan(/\bi16\b/))
          action { [:I16, text] }

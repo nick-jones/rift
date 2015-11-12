@@ -336,8 +336,8 @@ rule
     | BOOL {
       result = Rift::Nodes::BaseType::TYPE_BOOL
     }
-    | BYTE {
-      result = Rift::Nodes::BaseType::TYPE_BYTE
+    | I8 {
+      result = Rift::Nodes::BaseType::TYPE_I8
     }
     | I16 {
       result = Rift::Nodes::BaseType::TYPE_I16
