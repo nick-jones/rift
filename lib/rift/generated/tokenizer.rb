@@ -95,9 +95,6 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\bnamespace\b/))
          action { [:NAMESPACE, text] }
 
-      when (text = @ss.scan(/\bcpp_namespace\b/))
-         action { [:CPP_NAMESPACE, text] }
-
       when (text = @ss.scan(/\bcpp_include\b/))
          action { [:CPP_INCLUDE, text] }
 
@@ -110,23 +107,11 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\bcocoa_prefix\b/))
          action { [:COCOA_PREFIX, text] }
 
-      when (text = @ss.scan(/\bcsharp_namespace\b/))
-         action { [:CSHARP_NAMESPACE, text] }
-
-      when (text = @ss.scan(/\bdelphi_namespace\b/))
-         action { [:DELPHI_NAMESPACE, text] }
-
-      when (text = @ss.scan(/\bphp_namespace\b/))
-         action { [:PHP_NAMESPACE, text] }
-
       when (text = @ss.scan(/\bpy_module\b/))
          action { [:PY_MODULE, text] }
 
       when (text = @ss.scan(/\bperl_package\b/))
          action { [:PERL_PACKAGE, text] }
-
-      when (text = @ss.scan(/\bruby_namespace\b/))
-         action { [:RUBY_NAMESPACE, text] }
 
       when (text = @ss.scan(/\bsmalltalk_category\b/))
          action { [:SMALLTALK_CATEGORY, text] }
@@ -142,9 +127,6 @@ class Tokenizer < Racc::Parser
 
       when (text = @ss.scan(/\bxsd_nillable\b/))
          action { [:XSD_NILLABLE, text] }
-
-      when (text = @ss.scan(/\bxsd_namespace\b/))
-         action { [:XSD_NAMESPACE, text] }
 
       when (text = @ss.scan(/\bxsd_attrs\b/))
          action { [:XSD_ATTRS, text] }

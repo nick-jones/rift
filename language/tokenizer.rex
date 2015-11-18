@@ -64,23 +64,17 @@ rule
   {BOOL}                    { [:CONSTANT_INT, text == "true" ? 1 : 0] }
 
   {B}namespace{B}           { [:NAMESPACE, text] }
-  {B}cpp_namespace{B}       { [:CPP_NAMESPACE, text] }
   {B}cpp_include{B}         { [:CPP_INCLUDE, text] }
   {B}cpp_type{B}            { [:CPP_TYPE, text] }
   {B}java_package{B}        { [:JAVA_PACKAGE, text] }
   {B}cocoa_prefix{B}        { [:COCOA_PREFIX, text] }
-  {B}csharp_namespace{B}    { [:CSHARP_NAMESPACE, text] }
-  {B}delphi_namespace{B}    { [:DELPHI_NAMESPACE, text] }
-  {B}php_namespace{B}       { [:PHP_NAMESPACE, text] }
   {B}py_module{B}           { [:PY_MODULE, text] }
   {B}perl_package{B}        { [:PERL_PACKAGE, text] }
-  {B}ruby_namespace{B}      { [:RUBY_NAMESPACE, text] }
   {B}smalltalk_category{B}  { [:SMALLTALK_CATEGORY, text] }
   {B}smalltalk_prefix{B}    { [:SMALLTALK_PREFIX, text] }
   {B}xsd_all{B}             { [:XSD_ALL, text] }
   {B}xsd_optional{B}        { [:XSD_OPTIONAL, text] }
   {B}xsd_nillable{B}        { [:XSD_NILLABLE, text] }
-  {B}xsd_namespace{B}       { [:XSD_NAMESPACE, text] }
   {B}xsd_attrs{B}           { [:XSD_ATTRS, text] }
   {B}include{B}             { [:INCLUDE, text] }
   {B}void{B}                { [:VOID, text] }
