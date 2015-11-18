@@ -1,0 +1,6 @@
+---
+- !ruby/object:Rift::Nodes::Namespace
+  language: xsd
+  value: test
+  annotations:
+    uri: http://example.com

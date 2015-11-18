@@ -3,6 +3,7 @@ module Rift
     class Namespace < Node
       attr_accessor :language
       attr_accessor :value
+      attr_accessor :annotations
 
       def initialize(language, value)
         @language = language

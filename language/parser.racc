@@ -30,8 +30,9 @@ rule
 
   header
     : include
-    | NAMESPACE IDENTIFIER IDENTIFIER {
+    | NAMESPACE IDENTIFIER IDENTIFIER type_annotations {
       result = Rift::Nodes::Namespace.new(val[1], val[2])
+      result.annotations = val[3]
     }
     | NAMESPACE '*' IDENTIFIER {
       result = Rift::Nodes::Namespace.new("*", val[2])

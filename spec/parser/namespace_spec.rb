@@ -16,6 +16,12 @@ describe Rift::Parser, "when defining a namespace" do
     }
   end
 
+  context "with annotations" do
+    it {
+      expect(parser.parse("namespace xsd test (uri = 'http://example.com')")).to equal_tree "spec/fixtures/namespace/annotated.yml"
+    }
+  end
+
   context "with an invalid language type" do
     it {
       expect {
