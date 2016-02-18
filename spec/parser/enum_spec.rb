@@ -12,7 +12,7 @@ describe Rift::Parser, "when defining an enum" do
 
   context "with an non-value assigned member A" do
     it {
-      expect(parser.parse("enum X { A }")).to equal_tree "spec/fixtures/enum/unassigned_member.yml"
+      expect(parser.parse("enum X { e10 }")).to equal_tree "spec/fixtures/enum/unassigned_member.yml"
     }
   end
 

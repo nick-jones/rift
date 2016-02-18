@@ -43,7 +43,6 @@ macro
   COMMENT_SINGLE            \/\/[^\n]*
   COMMENT_UNIX              \#[^\n]*
   SYMBOL                    [:;\,\{\}\(\)\=<>\[\]]
-  ST_IDENTIFIER             [a-zA-Z-](\.[a-zA-Z_0-9-]|[a-zA-Z_0-9-])*
   LITERAL_DOUBLE            "[^"\\]*(?:\\.[^"\\]*)*"
   LITERAL_SINGLE            '[^'\\]*(?:\\.[^'\\]*)*'
   LITERAL                   ({LITERAL_DOUBLE}|{LITERAL_SINGLE})
@@ -225,12 +224,11 @@ rule
   {B}xor{B}                 { reserved_keyword(text) }
   {B}yield{B}               { reserved_keyword(text) }
 
-  {CONSTANT_DOUBLE}         { [:CONSTANT_DOUBLE, text.to_f] }
   {CONSTANT_HEX}            { [:CONSTANT_INT, text.to_i(16)] }
-  {CONSTANT_INT}            { [:CONSTANT_INT, text.to_i] }
   {IDENTIFIER}              { [:IDENTIFIER, text] }
+  {CONSTANT_DOUBLE}         { [:CONSTANT_DOUBLE, text.to_f] }
+  {CONSTANT_INT}            { [:CONSTANT_INT, text.to_i] }
   {LITERAL}                 { [:LITERAL, interpret_string_literal(text)] }
-  {ST_IDENTIFIER}           { [:ST_IDENTIFIER, text] }
 
   .                         { unexpected_token(text) }
 

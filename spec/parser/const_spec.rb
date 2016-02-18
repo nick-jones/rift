@@ -34,6 +34,12 @@ describe Rift::Parser, "when defining a const" do
     }
   end
 
+  context "with a scientific notation value" do
+    it {
+      expect(parser.parse("const i32 X = .1e10")).to equal_tree "spec/fixtures/const/scientific.yml"
+    }
+  end
+
   context "with a hex value 0xA" do
     it {
       expect(parser.parse("const i32 X = 0xA")).to equal_tree "spec/fixtures/const/hex.yml"

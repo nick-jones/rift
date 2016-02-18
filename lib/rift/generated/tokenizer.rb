@@ -569,23 +569,20 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\byield\b/))
          action { reserved_keyword(text) }
 
-      when (text = @ss.scan(/[+-]?([0-9]+\.([0-9]+)?|(\.[0-9]+))([eE][+-]?[0-9]+)?/))
-         action { [:CONSTANT_DOUBLE, text.to_f] }
-
       when (text = @ss.scan(/[+-]?0x[0-9A-Fa-f]+/))
          action { [:CONSTANT_INT, text.to_i(16)] }
-
-      when (text = @ss.scan(/[+-]?[0-9]+/))
-         action { [:CONSTANT_INT, text.to_i] }
 
       when (text = @ss.scan(/[a-zA-Z_](\.[a-zA-Z_0-9]|[a-zA-Z_0-9])*/))
          action { [:IDENTIFIER, text] }
 
+      when (text = @ss.scan(/[+-]?([0-9]+\.([0-9]+)?|(\.[0-9]+))([eE][+-]?[0-9]+)?/))
+         action { [:CONSTANT_DOUBLE, text.to_f] }
+
+      when (text = @ss.scan(/[+-]?[0-9]+/))
+         action { [:CONSTANT_INT, text.to_i] }
+
       when (text = @ss.scan(/("[^"\\]*(?:\\.[^"\\]*)*"|'[^'\\]*(?:\\.[^'\\]*)*')/))
          action { [:LITERAL, interpret_string_literal(text)] }
-
-      when (text = @ss.scan(/[a-zA-Z-](\.[a-zA-Z_0-9-]|[a-zA-Z_0-9-])*/))
-         action { [:ST_IDENTIFIER, text] }
 
       when (text = @ss.scan(/./))
          action { unexpected_token(text) }

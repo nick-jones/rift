@@ -5,5 +5,5 @@
   values:
   - !ruby/object:Rift::Nodes::EnumValue
     annotations:
-    name: A
+    name: e10
     value:
