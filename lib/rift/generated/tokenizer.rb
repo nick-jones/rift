@@ -473,9 +473,6 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\bprotected\b/))
          action { reserved_keyword(text) }
 
-      when (text = @ss.scan(/\bpublic\b/))
-         action { reserved_keyword(text) }
-
       when (text = @ss.scan(/\braise\b/))
          action { reserved_keyword(text) }
 
@@ -528,9 +525,6 @@ class Tokenizer < Racc::Parser
          action { reserved_keyword(text) }
 
       when (text = @ss.scan(/\bundef\b/))
-         action { reserved_keyword(text) }
-
-      when (text = @ss.scan(/\bunion\b/))
          action { reserved_keyword(text) }
 
       when (text = @ss.scan(/\bunless\b/))

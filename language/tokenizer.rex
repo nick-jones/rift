@@ -191,7 +191,6 @@ rule
   {B}print{B}               { reserved_keyword(text) }
   {B}private{B}             { reserved_keyword(text) }
   {B}protected{B}           { reserved_keyword(text) }
-  {B}public{B}              { reserved_keyword(text) }
   {B}raise{B}               { reserved_keyword(text) }
   {B}redo{B}                { reserved_keyword(text) }
   {B}rescue{B}              { reserved_keyword(text) }
@@ -210,7 +209,6 @@ rule
   {B}transient{B}           { reserved_keyword(text) }
   {B}try{B}                 { reserved_keyword(text) }
   {B}undef{B}               { reserved_keyword(text) }
-  {B}union{B}               { reserved_keyword(text) }
   {B}unless{B}              { reserved_keyword(text) }
   {B}unsigned{B}            { reserved_keyword(text) }
   {B}until{B}               { reserved_keyword(text) }
