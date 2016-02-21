@@ -38,8 +38,8 @@ macro
   WHITESPACE                [\s]+
   B                         \b
   COMMENT_RULE              \/\*\**\*\/
-  COMMENT_MULTI             \/\*[^*]\/*([^*\/]|[^*]\/|\*[^\/])*\**\*\/
-  COMMENT_DOC               \/\*\*([^*\/]|[^*]\/|\*[^\/])*\**\*\/
+  COMMENT_MULTI             \/\*[^*]([^*]|\*[^\/])*\*\/
+  COMMENT_DOC               \/\*\*([^*]|\*[^\/])*\*\/
   COMMENT_SINGLE            \/\/[^\n]*
   COMMENT_UNIX              \#[^\n]*
   SYMBOL                    [:;\,\{\}\(\)\=<>\[\]]

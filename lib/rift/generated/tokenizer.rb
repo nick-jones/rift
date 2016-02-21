@@ -68,10 +68,10 @@ class Tokenizer < Racc::Parser
       when (text = @ss.scan(/\/\*\**\*\//))
          action { next_token }
 
-      when (text = @ss.scan(/\/\*[^*]\/*([^*\/]|[^*]\/|\*[^\/])*\**\*\//))
+      when (text = @ss.scan(/\/\*[^*]([^*]|\*[^\/])*\*\//))
          action { next_token }
 
-      when (text = @ss.scan(/\/\*\*([^*\/]|[^*]\/|\*[^\/])*\**\*\//))
+      when (text = @ss.scan(/\/\*\*([^*]|\*[^\/])*\*\//))
          action { register_doc_text_candidate(text) ; next_token }
 
       when (text = @ss.scan(/\/\/[^\n]*/))

@@ -36,7 +36,7 @@ describe Rift::Parser do
     it "should permit comments" do
       expression = <<-eos
         // comment
-        struct X { /* comment */ }
+        struct X { /* * / comment */ }
         # comment
         /**
          * comment
